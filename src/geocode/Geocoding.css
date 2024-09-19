@@ -1,0 +1,118 @@
+/* General container styles */
+.container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 0px;  /* More space between the header and content */
+  padding-bottom: 27px;  /* Padding at the bottom */
+}
+
+/* Geocoding title */
+.geocoding-title {
+  color: #b00;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 0px;  
+  text-decoration: underline;
+}
+
+/* Banner image styling */
+.banner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 400px;  /* Limiting height to avoid large images taking too much space */
+}
+
+/* Steps section */
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  /* Allows items to wrap on smaller screens */
+  margin-bottom: 30px;
+}
+
+.step {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.step img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+/* 3D Button Styles */
+.button-3d {
+  background-color: #5a4b41;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px;  /* More space around the buttons */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 #3a2f25;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 16px;  /* Larger font size */
+}
+
+.button-3d:hover {
+  background-color: #3a2f25;
+}
+
+.button-3d:active {
+  box-shadow: 0 2px 0 #3a2f25;
+  transform: translateY(3px);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;  /* Align buttons centrally */
+  flex-wrap: wrap;  /* Ensure buttons wrap on smaller screens */
+  margin-top: 30px;  /* Extra space at the top */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .geocoding-title {
+    font-size: 24px;
+  }
+
+  .banner-image {
+    max-height: 300px;  /* Reduce banner size on smaller screens */
+  }
+
+  .button-group {
+    flex-direction: column;  /* Stack buttons vertically on smaller screens */
+  }
+
+  .button-3d {
+    width: 90%;  /* Full-width buttons on small screens */
+    margin: 10px auto;  /* Center buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .geocoding-title {
+    font-size: 20px;
+  }
+
+  .banner-image {
+    max-height: 250px;
+  }
+
+  .button-3d {
+    width: 100%;
+  }
+}
